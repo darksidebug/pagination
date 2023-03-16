@@ -1,0 +1,125 @@
+.pagination {
+  margin: 25px 0 15px 0;
+  background: white;
+  list-style: none;
+  border-radius: 5px;
+}
+
+.hidden{
+  display: none;
+}
+
+.pagination,
+.pagination a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pagination a {
+  text-decoration: none;
+  color: #4A69AD;
+  height: 50px;
+  width: 50px;
+  font-size: 16px;
+  padding-top: 1px;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-right-width: 0px;
+
+  &.pagination--button{
+    cursor: pointer;
+
+    &.disabled{
+      cursor: default;
+
+      &:hover{
+        background-color: white;
+        color: #4A69AD;
+      }
+    }
+  }
+
+  &:active {
+    overflow: hidden;
+    border-left-width: 1px;
+    background: #4A69AD;
+    color: white;
+  }
+
+  &:hover {
+    background: #4A69AD;
+    color: white;
+    border-top-color: #4A69AD;
+    border-bottom-color: #4A69AD;
+  }
+
+  &.selected{
+    background-color: #4A69AD;
+    color: white;
+    border-top-color: #4A69AD;
+    border-bottom-color: #4A69AD;
+  }
+
+  &.icon a {
+    min-width: 120px;
+  }
+}
+
+.pagination a:first-child  {
+  border-left-width: 1px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  overflow: hidden;
+
+}
+.pagination a:last-child {
+  border-right-width: 1px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  overflow: hidden;
+}
+
+.pagination--dot{
+  cursor: default;
+}
+
+.pagination--page-count{
+  display: flex;
+  justify-content: center;
+}
+
+.pagination--wrapper{
+  display: flex;
+  justify-content: center;
+  margin: 25px 0 15px 0;
+}
+
+.pagination--page-count .fetching{
+  span{
+    position: relative;
+    margin-right: 2px;
+
+    &:nth-child(1){
+      animation: animate .8s ease-in-out .1s infinite;
+    }
+    &:nth-child(2){
+      animation: animate .8s ease-in-out .5s infinite;
+    }
+    &:nth-child(3){
+      animation: animate .8s ease-in-out .7s infinite;
+    }
+  }
+}
+
+@keyframes animate {
+  0%{
+    top: 0;
+  }
+  70%{
+    top: -5px;
+  }
+  100%{
+    top: 0;
+  }
+}

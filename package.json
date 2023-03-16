@@ -1,0 +1,29 @@
+{
+  "name": "vue-pagination",
+  "main": "./dist/vue-pagination.umd.js",
+  "module": "./dist/vue-pagination.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-pagination.es.js",
+      "require": "./dist/vue-pagination.umd.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
+  "private": false,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.2.45",
+    "sass": "^1.56.1",
+    "sass-loader": "^13.2.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.0.0",
+    "vite": "^4.1.0"
+  }
+}
