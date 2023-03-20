@@ -9,7 +9,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: node
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with: 
           node-version: 16
           registry-url: https://registry.nmpjs.org
