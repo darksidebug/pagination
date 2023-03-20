@@ -7,9 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: checkout
-        users: actions/checkout@v2
+        uses: actions/checkout@v2
       - name: node
-        users: actions/checkout@v2
+        uses: actions/checkout@v2
         with: 
           node-version: 16
           registry-url: https://registry.nmpjs.org
