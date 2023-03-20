@@ -1,14 +1,5 @@
 {
   "name": "@darksidebug/vue-pagination",
-  "main": "./dist/vue-pagination.umd.js",
-  "module": "./dist/vue-pagination.es.js",
-  "exports": {
-    ".": {
-      "import": "./dist/vue-pagination.es.js",
-      "require": "./dist/vue-pagination.umd.js"
-    },
-    "./dist/style.css": "./dist/style.css"
-  },
   "private": false,
   "version": "0.0.0",
   "type": "module",
