@@ -1,0 +1,22 @@
+name: "publish npm vue-pagination"
+
+on: push
+
+jobs:
+  publish: 
+    runs-on: ubuntu-latest
+    steps: 
+      - name: checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: node
+        uses: actions/checkout@v3
+        with: 
+          node-version: 16
+          registry-url: https://registry.nmpjs.org
+      - name: publish
+        run: npm publish --access public
+        working-directory: ./
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.PACKAGE_AUTH_TOKEN}}
